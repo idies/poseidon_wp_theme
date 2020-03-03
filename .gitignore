@@ -1,23 +1,54 @@
-# ignore everything in the root except the "wp-content" directory.
-!wp-content/
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+.htaccess
+wp-config.php
+*backwpup*
 
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
+# There are used in building and minimizing the theme.
+node_modules
+//assets/vendor/*
+//assets/css/main.css.map
+//assets/manifest.json
+# //assets/css/*main*.css #Why would we ignore the main css file?
+# //assets/js/*scripts*.js # Why would we ignore scripts?
+# //assets/js/vendor/modernizr.min.js # Why would we ignore modernizer?
 
-# ignore these plugins
-wp-content/plugins/hello.php
-
-# ignore specific themes
-wp-content/themes/twenty*/
-
-# ignore node dependency directories
-node_modules/
-
-# ignore log files and databases
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+ 
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.gz 
+*.7z
+*.dmg
+*.js.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+ 
+# Logs and databases #
+######################
 *.log
 *.sql
 *.sqlite
+ 
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
